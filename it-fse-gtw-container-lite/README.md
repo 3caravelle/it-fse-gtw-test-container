@@ -2,12 +2,13 @@
 
 # _it-fse-gtw-test-container_
 
-In questa directory è presente un file `docker-compose` che consente di avviare un'istanza locale *lite* del **gateway** di FSE 2.0.
+In questa directory è presente un file `docker-compose` che consente di avviare un'istanza locale _lite_ del **gateway** di FSE 2.0.
 
 La seguente versione contiene il sottoinsieme minimo di microservizi necessari ad invocare i seguenti endpoint
-* POST `/documents/validation`: il servizio consentirà di validare il documento CDA2 fornito in input.
-* POST `/documents`: il servizio consentirà di trasformare il documento CDA2 fornito in input in Bundle FHIR.
-* GET `/status`: il servizio consentirà di conoscere lo stato della transazione fornendo in input il workflowInstanceId o il traceID.
+
+- POST `/documents/validation`: il servizio consentirà di validare il documento CDA2 fornito in input.
+- POST `/documents`: il servizio consentirà di trasformare il documento CDA2 fornito in input in Bundle FHIR.
+- GET `/status`: il servizio consentirà di conoscere lo stato della transazione fornendo in input il workflowInstanceId o il traceID.
 
 <br/>
 
@@ -65,6 +66,10 @@ Una volta avviato sarà possibile utilizzare come endpoint di collegamento http:
 
 La documentazione OpenAPI (Swagger UI) è disponibile all’indirizzo: http://localhost:8010/openapi/swagger-ui/index.html. Aprendo questo URL dal browser è possibile esplorare e testare le API esposte dal Gateway.
 
+!!! warning "EDIT"
+
+    La documentazione OpenAPI è raggiungibile all'indirizzo http://localhost:8010/openapi/swagger-ui/index.html
+
 <br/>
 
 ## Troubleshooting:
@@ -78,6 +83,8 @@ L'output atteso dal seguente comando è il seguente:
 | CONTAINER ID | NAMES                                                      | IMAGE                            | STATE   |
 |--------------|------------------------------------------------------------|----------------------------------|---------|
 | f84330c03b5b | it-fse-gtw-container-lite-it-fse-gtw-config-1              | it-fse-ms-runner                 | running |
+| ------------ | ---------------------------------------------------------- | -------------------------------- | ------- |
+| f84330c03b5b | it-fse-gtw-container-lite-it-fse-gtw-status-check-1        | it-fse-ms-runner                 | running |
 | 395d5024e63b | it-fse-gtw-container-lite-it-fse-gtw-dispatcher-1          | it-fse-ms-runner                 | running |
 | f84330c03b5b | it-fse-gtw-container-lite-it-fse-gtw-status-check-1        | it-fse-ms-runner                 | running |
 | ba7aa381fb61 | it-fse-gtw-container-lite-it-fse-gtw-status-manager-1      | it-fse-ms-runner                 | running |
@@ -87,5 +94,6 @@ L'output atteso dal seguente comando è il seguente:
 | 3f1ef0f0fa94 | it-fse-gtw-container-lite-mongo-1                          | mongo:4.2                        | running |
 | 3fb5f91d61a3 | it-fse-gtw-container-lite-kafka-1                          | confluentinc/cp-kafka:6.2.1      | running |
 | b561e8c7a241 | it-fse-gtw-container-lite-zookeeper-1                      | confluentinc/cp-zookeeper:latest | running |
+|
 
 <br/>
