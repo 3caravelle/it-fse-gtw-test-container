@@ -47,3 +47,18 @@ git push --force-with-lease origin
 git tag -a <versione>
 git push origin <versione>
 ```
+
+# Changelog
+
+## 13/03/2025
+
+### Fix
+
+- Aggiornato script per download dataset Mongob `mongo-dump.py` per gestire file gzipped.
+- Modificato istruzioni per run locale in file `README.md`.
+
+## 12/03/2025
+
+### Fix
+
+- Utilizzo repository fork per modulo `it-fse-gtw-dispatcher` (branch `stable`).
