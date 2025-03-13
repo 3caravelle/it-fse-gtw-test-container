@@ -202,8 +202,8 @@ services:
     build:
       context: ./../it-fse-ms-runner/
     environment:
-      URL: ${REPO_BASE_URL}/it-fse-gtw-dispatcher.git
-      BRANCH: ${CURRENT_BRANCH}
+      URL: https://github.com/3caravelle/it-fse-gtw-dispatcher.git #${REPO_BASE_URL}/it-fse-gtw-dispatcher.git
+      BRANCH: stable #${CURRENT_BRANCH}
       PORT: 8010
     volumes: 
       - mvn-cache:/root/.m2
